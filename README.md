@@ -1,17 +1,64 @@
-# count
+📊 Count - Gestionnaire de Finances Personnelles
+Count est une application mobile et web développée avec Flutter permettant de suivre, catégoriser et gérer ses dépenses quotidiennes de manière simple, moderne et visuelle.
 
-A new Flutter project.
+✨ Fonctionnalités actuelles
+🎨 Tableau de bord visuel (Accueil)
+Jauges circulaires interactives : Visualisation globale des dépenses mensuelles grâce à un composant central (CircularProgressIndicator dans un Stack).
 
-## Getting Started
+Répartition par catégories : Aperçu sous forme de sous-jauges pour les postes de dépenses principaux (Appartement, Loisirs, Extras).
 
-This project is a starting point for a Flutter application.
+📜 Historique & Gestion des Transactions (CRUD)
+Création : Ajout de dépenses via une fenêtre modale (showModalBottomSheet) avec sélecteur de date natif (showDatePicker).
 
-A few resources to get you started if this is your first Flutter project:
+Lecture : Affichage optimisé en liste dynamique (ListView.builder) sous forme de cartes (Card / ListTile).
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Mise à jour : Modification rapide des dépenses existantes avec pré-remplissage automatique des formulaires.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Suppression : Suppression instantanée des cartes.
+
+🌗 Interface & Thème
+Thème adaptatif : Support automatique du mode clair et sombre selon les réglages du téléphone (ThemeMode.system).
+
+Navigation fluide : Navigation par onglets via BottomNavigationBar.
+
+🚀 Prochaines évolutions (Roadmap)
+[ ] Gestion des Tags : Catégorisation personnalisée des dépenses à l'aide de widgets InputChip.
+
+[ ] Objectifs budgétaires : Définition de plafonds mensuels connectés directement aux jauges d'accueil.
+
+[ ] Persistance des données : Sauvegarde en base de données locale ou en ligne.
+
+[ ] Graphiques analytiques : Statistiques mensuelles et annuelles.
+
+🛠️ Stack Technique
+Framework : Flutter (Dart)
+
+Architecture d'état : Remontée d'état (State Lifting) vers main.dart
+
+UI/UX : Material Design 3
+
+📂 Structure du projet
+Plaintext
+lib/
+├── ecrans/
+│   ├── page_accueil.dart      # Tableau de bord principal (jauges)
+│   ├── page_historique.dart   # Liste des transactions et formulaires CRUD
+│   ├── page_objectifs.dart   # Suivi des objectifs de budget
+│   └── page_parametres.dart  # Réglages de l'application
+├── models/
+│   └── depense.dart           # Modèle de données Depense
+└── main.dart                  # Point d'entrée, thèmes et état global
+⚙️ Installation et Lancement
+Cloner le dépôt :
+
+Bash
+git clone https://github.com/LoGaRiS60/count.git
+cd count
+Récupérer les dépendances :
+
+Bash
+flutter pub get
+Lancer l'application :
+
+Bash
+flutter run
